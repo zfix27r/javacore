@@ -1,7 +1,5 @@
 package lesson2;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class HomeWorkApp {
     public static void main(String[] args) {
 
