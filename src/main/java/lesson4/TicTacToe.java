@@ -336,7 +336,7 @@ public class TicTacToe {
         int shift = Math.min(selectedRow, selectedColumn);
         int length = fieldSize - Math.abs(selectedRow - selectedColumn);
 
-        if (length >= fieldSize) {
+        if (length >= winLine) {
             System.out.println();
             for (int i = 0; i < length; i++) {
                 if (field[selectedRow - shift + i][selectedColumn - shift + i] == getTurnSymbol()) {
@@ -354,7 +354,7 @@ public class TicTacToe {
         int shift = Math.min(selectedRow, selectedColumnInversion);
         int length = fieldSize - Math.abs(selectedRow - selectedColumnInversion);
 
-        if (length >= fieldSize) {
+        if (length >= winLine) {
             for (int i = 0; i < length; i++) {
                 if (field[selectedRow - shift + i][fieldSize - (selectedColumnInversion - shift) - 1 - i] == getTurnSymbol()) {
                     counter++;
