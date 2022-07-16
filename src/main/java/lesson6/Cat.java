@@ -6,20 +6,8 @@ public class Cat extends Animal {
 
     Cat(String name) {
         super(name);
-
+        maxDistanceRun = 200;
+        maxDistanceSwim = 0;
         counter++;
-    }
-
-    @Override
-    public void run(int lengthBarrier) {
-        int maxLength = 200;
-
-        if (lengthBarrier <= maxLength) super.run(lengthBarrier);
-        else System.out.println(name + " не может бегать больше " + maxLength + "м.");
-    }
-
-    @Override
-    public void swim(int lengthBarrier) {
-        System.out.println(name + " не умеет плавать.");
     }
 }

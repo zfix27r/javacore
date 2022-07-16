@@ -1,22 +1,26 @@
 package lesson6;
 
-public abstract class Animal {
+abstract class Animal {
 
     public static int counter;
-
     protected String name;
+    protected int maxDistanceRun;
+    protected int maxDistanceSwim;
 
     Animal(String name) {
         this.name = name;
-
         counter++;
     }
 
-    public void swim(int lengthBarrier) {
-        System.out.println(name + " проплыл " + lengthBarrier + "м.");
+    boolean isSwim() {
+        return maxDistanceSwim > 0;
     }
 
-    public void run(int lengthBarrier) {
-        System.out.println(name + " пробежал " + lengthBarrier + "м.");
+    boolean swim(int distance) {
+        return distance <= maxDistanceSwim;
+    }
+
+    boolean run(int distance) {
+        return distance <= maxDistanceRun;
     }
 }
