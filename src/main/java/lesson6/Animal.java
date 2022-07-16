@@ -1,6 +1,6 @@
 package lesson6;
 
-public class Animal {
+public abstract class Animal {
 
     public static int counter;
 
