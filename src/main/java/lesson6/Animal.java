@@ -17,10 +17,10 @@ abstract class Animal {
     }
 
     boolean swim(int distance) {
-        return distance <= maxDistanceSwim;
+        return distance <= maxDistanceSwim && distance > -1;
     }
 
     boolean run(int distance) {
-        return distance <= maxDistanceRun;
+        return distance <= maxDistanceRun && distance > -1;
     }
 }
